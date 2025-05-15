@@ -150,6 +150,7 @@ class PrivateConstants:
         VEML6040 = 4  # Color sensor
         ADXL345 = 5  # // 3 axis accel
         INA226 = 6
+        AS5600 = 8
 
     class MODULE_TYPES(Enum):
         PCA9685 = 0
