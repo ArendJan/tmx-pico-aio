@@ -15,16 +15,17 @@ class TmxSensors:
         await self.add_sensor(
             PrivateConstants.SENSOR_TYPES.ADXL345, [i2c_port], callback
         )
+
     async def add_AS5600(self, i2c_port, expander_ports, callback):
         data = [i2c_port, expander_ports]
-        
-        await self.add_sensor(
-            PrivateConstants.SENSOR_TYPES.AS5600, data, callback
-        )
+
+        await self.add_sensor(PrivateConstants.SENSOR_TYPES.AS5600, data, callback)
+
     async def add_veml6040(self, i2c_port, callback):
         await self.add_sensor(
             PrivateConstants.SENSOR_TYPES.VEML6040, [i2c_port], callback
         )
+
     async def add_vl53(self, i2c_port, callback):
         await self.add_sensor(
             PrivateConstants.SENSOR_TYPES.TOF_VL53, [i2c_port], callback
