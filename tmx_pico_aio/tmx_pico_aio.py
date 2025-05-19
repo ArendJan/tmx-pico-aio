@@ -264,7 +264,7 @@ class TmxPicoAio:
         self.neopixels_initiated = False
 
         self._sensor_reporter = None
-        self._module_reporter = None
+        # self._module_reporter = None
         self.sensors = tmx_sensors.TmxSensors(self)
         self.modules = tmx_modules.TmxModules(self)
         self.watchdog = None
@@ -1741,10 +1741,7 @@ class TmxPicoAio:
 
     async def _module_report(self, report):
         """ """
-        if self._module_reporter is None:
-            print("No module reporter installed")
-            return
-        await self._module_reporter(report)
+        print("modules not supported in this version")
 
     async def _spi_report(self, report):
         """

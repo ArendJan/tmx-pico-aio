@@ -25,7 +25,6 @@ class TmxSensors:
         await self.add_sensor(
             PrivateConstants.SENSOR_TYPES.VEML6040, [i2c_port], callback
         )
-
     async def add_vl53(self, i2c_port, callback):
         await self.add_sensor(
             PrivateConstants.SENSOR_TYPES.TOF_VL53, [i2c_port], callback
