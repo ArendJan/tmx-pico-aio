@@ -360,7 +360,7 @@ class TmxModules:
     async def add_module(self, module_type, module_settings, callback):
         # print(module_settings)
         await self.pico_aio._send_command(
-            [PrivateConstants.MODULE_NEW, self.num, module_type.value, *module_settings]
+            [PrivateConstants.MODULE_NEW, 1, self.num, module_type.value, *module_settings]
         )
         self.callbacks.append(callback)
         self.num += 1
